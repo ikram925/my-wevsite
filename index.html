@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>লোগোসহ লগইন সিস্টেম</title>
+</head>
+<body style="font-family: Arial; background: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+    <div style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 350px; text-align: center;">
+        
+        <!-- এখানে লোগো বসানো হয়েছে -->
+        <div style="margin-bottom: 20px;">
+            <!-- আপনি চাইলে নিচের src-এর ভেতরের লিংকের জায়গায় আপনার নিজের লোগোর লিংক বা ফাইলের নাম দিতে পারেন -->
+            <img src="logo.png" alt="Logo" style="max-width: 150px; height: auto;">
+        </div>
+
+        <h2 style="margin-bottom: 20px; color: #333;">লগইন করুন</h2>
+        
+        <form id="loginForm" style="text-align: left;">
+            <input type="tel" id="userMobile" placeholder="মোবাইল নম্বর" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            <input type="password" id="userPassword" placeholder="পাসওয়ার্ড" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            <button type="submit" style="width: 100%; padding: 10px; background: #0078d4; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">প্রবেশ করুন</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const mobile = document.getElementById('userMobile').value;
+            const password = document.getElementById('userPassword').value;
+
+            console.log("--- নতুন লগইন ডেটা পাওয়া গেছে ---");
+            console.log("মোবাইল নম্বর:", mobile);
+            console.log("পাসওয়ার্ড:", password);
+
+            alert("তথ্য সফলভাবে কনসোলে পাঠানো হয়েছে!");
+        });
+    </script>
+
+</body>
+</html>
